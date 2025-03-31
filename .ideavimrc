@@ -1,0 +1,65 @@
+set mapleader=" "
+set clipboard+=unnamed
+set clipboard+=ideaput
+set relativenumber
+set number
+set ReplaceWithRegister
+set showmode
+set showcmd
+
+" search config
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+map <c-/> :action Replace<CR>
+map / :action Find<CR>
+
+" === IDE remap
+" work with windows
+nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>h :action HideActiveWindow<CR>
+nnoremap <leader>w :action HideAllWindows<CR>
+nnoremap <leader>en :action EditSourceInNewWindow<CR>
+
+" remap ctrl+alt+b
+nnoremap gi: action GoToImplementation<CR>
+
+" remap ctrl+u
+nnoremap gs :action GotoSuperMethod<CR>
+
+" remap ctrl+shifr+t
+nnoremap <leader>gt :action GoToTest<CR>
+
+" rename file
+nnoremap <leader>rn :action RenameFile<CR>
+
+" rename element, same as shift+F6
+nnoremap <leader>re :action RenameElement<CR>
+
+nnoremap <leader>q :action QuickJavaDoc<CR>
+nnoremap <leader>i :action ImplementMethods<CR>
+nnoremap <leader>o :action OverrideMethods<CR>
+
+" git
+nnoremap <leader>gf :action Git.Fetch<CR>
+nnoremap <leader>gp :action Git.Pull<CR>
+
+" controls
+map <leader>r :action Run<CR>
+map <leader>s :action Stop<CR>
+map <leader>d :action Debug<CR>
+nnoremap <leader>b :action ToggleLineBreakpoing<CR>
+
+" === VIM remap
+" paste without copying to clipboard
+vnoremap <leader>p "_dP
+
+" === plugins
+set commentary
+set surround
+set NERDTree
+
+" same as alt+f1+1
+nnoremap gn :NERDTreeFind<CR>
+map <leader>n :NERDTreeToggle<CR>
