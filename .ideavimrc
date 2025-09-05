@@ -1,4 +1,4 @@
-set mapleader=" "
+let mapleader=" "
 set clipboard+=unnamed
 set clipboard+=ideaput
 set relativenumber
@@ -40,6 +40,14 @@ nnoremap <leader>re :action RenameElement<CR>
 nnoremap <leader>q :action QuickJavaDoc<CR>
 nnoremap <leader>i :action ImplementMethods<CR>
 nnoremap <leader>o :action OverrideMethods<CR>
+
+" bookmarks
+nnoremap <leader>m :action ToggleBookmark<CR>
+nnoremap <leader>mb :action ToggleBookmarkWithMnemonic<CR>
+nnoremap <leader>ms :action ShowBookmarks<CR>
+
+" switcher
+nnoremap <leader>x :action Switcher<CR>
 
 " git
 nnoremap <leader>gf :action Git.Fetch<CR>
